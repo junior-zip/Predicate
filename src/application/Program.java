@@ -15,14 +15,9 @@ public class Program {
         list.add(new Product("Tablet", 350.00));
         list.add(new Product("HD Case", 80.90));
 
+        list.forEach(Product::nonStaticProductPredicate);
 
-        Double min = 100.0;
-
-        list.removeIf(p -> p.getPrice() >= min);
-
-        for (Product p: list){
-            System.out.println(p);
-        }
+        list.forEach(System.out::println);
 
     }
 
